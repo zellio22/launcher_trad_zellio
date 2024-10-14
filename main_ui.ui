@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>534</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>950</width>
+    <height>534</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>950</width>
+    <height>534</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Installe traduction</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>logo_10.png</normalon>
+   </iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="Choix_trad">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>130</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox#Choix_trad {
+    background-color: rgb(18, 39, 52,150);
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: rgb(90, 186, 255);
+    color: white;
+    font: bold 12px;
+    padding: 5px;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 5px;
+}
+
+QComboBox#Choix_trad::drop-down {
+    border: none;
+}
+
+
+QComboBox#Choix_trad QAbstractItemView {
+    background-color: rgb(18, 39, 52);
+    selection-background-color: rgb(29, 78, 109);
+    border: 2px solid rgb(90, 186, 255);
+}
+
+QComboBox#Choix_trad:hover {
+    background-color: rgb(20, 54, 76,180);
+}
+
+QComboBox#Choix_trad:pressed {
+    background-color: rgb(29, 78, 109);
+    border-style: inset;
+}</string>
+    </property>
+    <property name="maxVisibleItems">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="selecte_path">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>50</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> QPushButton#selecte_path {
+     
+     background-color: rgb(18, 39, 52,180);
+     border-style: outset;
+     border-width: 3px;
+     border-radius: 25px;
+     border-color: rgb(90, 186, 255);
+     color: white;
+     font: bold 15px;
+     min-width: 10px;
+     padding: 5px;
+    border-top-left-radius:2px;
+     border-bottom-right-radius: 5px;
+ }
+ QPushButton#selecte_path:pressed {
+     background-color: rgb(29, 78, 109);
+     border-style: inset;
+ }
+
+ QPushButton#selecte_path:hover {
+    background-color: rgb(20, 54, 76,180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Choix Repertoire de SC</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Startinstall">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>50</y>
+      <width>200</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+ QPushButton#Startinstall {
+     
+     background-color: rgb(18, 39, 52,180);
+     border-style: outset;
+     border-width: 3px;
+     border-radius: 25px;
+     border-color: rgb(90, 186, 255);
+     color: white;
+     font: bold 15px;
+     min-width: 10px;
+     padding: 5px;
+    border-top-left-radius:2px;
+     border-bottom-right-radius: 5px;
+ }
+ QPushButton#Startinstall:pressed {
+     background-color: rgb(29, 78, 109);
+     border-style: inset;
+ }
+
+ QPushButton#Startinstall:hover {
+    background-color: rgb(20, 54, 76,180);
+}</string>
+    </property>
+    <property name="text">
+     <string>Installe Traduction</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>445</y>
+      <width>650</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QLabel#label {
+    background-color: rgb(18, 39, 52,180);
+    border-style: outset;
+    border-width: 1px;
+    border-radius: 15px;
+   /* border-color: rgb(90, 186, 255);*/
+ 	border-color: rgb(90, 186, 255,80);
+    color: white;
+    font: normal 12px;  /* Police plus petite pour les messages */
+    padding: 8px;
+
+
+}
+
+QLabel#label:hover {
+    background-color: rgb(20, 45, 60,180);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;texte&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>951</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>back_950.jpg</pixmap>
+    </property>
+   </widget>
+   <zorder>Choix_trad</zorder>
+   <zorder>label_2</zorder>
+   <zorder>selecte_path</zorder>
+   <zorder>Startinstall</zorder>
+   <zorder>label</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

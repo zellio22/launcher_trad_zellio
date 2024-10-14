@@ -1,0 +1,17 @@
+
+l'utilisateur selectionne le repertoire 
+
+il clique sur installer 
+
+verification que le repertoire existe si non il le cree 
+    path_check_gen()
+
+verification de la vertion 
+
+    lecture du json installer 
+        si non fait l'install 
+
+    verification json/repertoire
+        si ok fait rien dit que c'est installe 
+
+        si non fait l'install 
