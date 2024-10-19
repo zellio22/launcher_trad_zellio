@@ -17,7 +17,6 @@ nom_fichier_local="global.ini"
 #repertoire a ajouter
 path_add ="/data/Localization/french_(france)/"
 
-
 #bordel pour teste
 data_repo = {
     "Commit_sha": "Bonjour",
