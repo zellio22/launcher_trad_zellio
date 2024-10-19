@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import requests
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -138,7 +138,16 @@ class Ui_MainWindow(object):
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(0, 0, 951, 511))
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("back_950.jpg"))
+        url = 'https://raw.githubusercontent.com/zellio22/launcher_trad_zellio/refs/heads/main/back_950.jpg'
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+        # Convertir le contenu de l'image en QPixmap
+                image_data = QtCore.QByteArray(response.content)
+                pixmap = QtGui.QPixmap()
+                pixmap.loadFromData(image_data)       
+        
+        self.label_2.setPixmap(QtGui.QPixmap(pixmap))
         self.label_2.setObjectName("label_2")
         self.Choix_trad.raise_()
         self.label_2.raise_()
