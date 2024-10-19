@@ -3,16 +3,24 @@ import os,sys
 from PyQt5 import QtWidgets
 from main_ui import Ui_MainWindow
 from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 import json
 
 
 # URL du dépôt
-repo1_owner = 'Shukunkami'
-repo1_name = 'SCFR'
-repo1_directory_path = 'LIVE/data/Localization/french_(france)'  # Chemin du répertoire dans le repo
+#repo1_owner = 'Shukunkami'
+#repo1_name = 'SCFR'
+#repo1_directory_path = 'LIVE/data/Localization/french_(france)'  # Chemin du répertoire dans le repo
 
-raw_url="https://raw.githubusercontent.com/Shukunkami/SCFR/refs/heads/main/LIVE/data/Localization/french_(france)/global.ini"
+#raw_url="https://raw.githubusercontent.com/Shukunkami/SCFR/refs/heads/main/LIVE/data/Localization/french_(france)/global.ini"
+
+repo1_owner = 'Dymerz'
+repo1_name = 'StarCitizen-Localization'
+repo1_directory_path = 'data/Localization/french_(france)'  # Chemin du répertoire dans le repo
+
+raw_url="https://raw.githubusercontent.com/Dymerz/StarCitizen-Localization/refs/heads/main/data/Localization/french_(france)/global.ini"
+
+
 
 nom_fichier_local="global.ini"
 
@@ -76,6 +84,9 @@ def json_write(path_file,data):
 
     with open(path_file+"/Version_trad.json", "w") as file:
         json.dump(data, file, indent=4)
+        
+    with open(path_file+"/user.cfg", "w") as fichier:
+        fichier.write("g_language = french_(france)") #ecriture du User.cfg
    
 def json_read(path_file):
 
