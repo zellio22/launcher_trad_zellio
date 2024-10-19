@@ -44,6 +44,6 @@ Star Citizen, le célèbre simulateur spatial de Cloud Imperium Games, est très
 
 Cette traduction provient de “https://sctranslator.danidomen.com/edit/fr/global” un grand merci à eux. Nous avons juste mis un launcher en place pour vous faciliter l’installation.
 
-## Autre solution pour insttaler la traduction 
+## Autre solution pour installer la traduction 
   1.  [Manuellement](MANU.md)
   2.   [Execution avec Python](PYTHON.md)
