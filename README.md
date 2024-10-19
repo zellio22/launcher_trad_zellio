@@ -18,7 +18,7 @@ Star Citizen, le célèbre simulateur spatial de Cloud Imperium Games, est très
 
 1. Telecharger l'executable
    
-   [Launcher_LVDM.exe](launcher/launcher_LVDM.exe)
+   [Launcher_LVDM.exe](https://github.com/zellio22/launcher_trad_zellio/raw/refs/heads/main/launcher/launcher_LVDM.exe)
 
 ## Utilisation
 
