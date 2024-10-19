@@ -46,4 +46,4 @@ Cette traduction provient de “https://sctranslator.danidomen.com/edit/fr/globa
 
 ## Autre solution pour insttaler la traduction 
   1.  [Manuellement](MANU.md)
-  2.   [Execution avec Python](python.md)
+  2.   [Execution avec Python](PYTHON.md)
