@@ -6,29 +6,16 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
 from PyQt5 import QtCore, QtWidgets
 import json
 
-
-# URL du dépôt
-#repo1_owner = 'Shukunkami'
-#repo1_name = 'SCFR'
-#repo1_directory_path = 'LIVE/data/Localization/french_(france)'  # Chemin du répertoire dans le repo
-
-#raw_url="https://raw.githubusercontent.com/Shukunkami/SCFR/refs/heads/main/LIVE/data/Localization/french_(france)/global.ini"
-
 repo1_owner = 'Dymerz'
 repo1_name = 'StarCitizen-Localization'
 repo1_directory_path = 'data/Localization/french_(france)'  # Chemin du répertoire dans le repo
 
 raw_url="https://raw.githubusercontent.com/Dymerz/StarCitizen-Localization/refs/heads/main/data/Localization/french_(france)/global.ini"
 
-
-
 nom_fichier_local="global.ini"
-
 
 #repertoire a ajouter
 path_add ="/data/Localization/french_(france)/"
-
-#repertoire selectionner par l'utilisateur
 
 
 #bordel pour teste
@@ -38,17 +25,10 @@ data_repo = {
     "Commit_Date": "var2"
 }
 
-data_json = {
-    "Commit_sha": "data_json",
-    "Commit_Message": "va1r",
-    "Commit_Date": "var2"
-}
-
 def get_commits_infos(repo_owner, repo_name, directory_path):
     # API URL
     url = f'https://api.github.com/repos/{repo_owner}/{repo_name}/commits'
     params = {'path': directory_path,'per_page': 1}
-
 
     response = requests.get(url, params=params)
     
@@ -62,9 +42,6 @@ def get_commits_infos(repo_owner, repo_name, directory_path):
             return data_repo
     else:
         print(f"Erreur : {response.status_code} - {response.text}")
-
-
-#get_commits_infos(repo_owner, repo_name, directory_path)
 
 def dl_file_from_git(raw_url, fichier_local):
     # Envoie la requête pour obtenir le contenu brut du fichier
@@ -80,7 +57,7 @@ def dl_file_from_git(raw_url, fichier_local):
         print(f"Erreur lors du téléchargement : {response.status_code}")
         
 
-def json_write(path_file,data):
+def json_write(path_file,data):#crée le json 
 
     with open(path_file+"/Version_trad.json", "w") as file:
         json.dump(data, file, indent=4)
@@ -112,23 +89,23 @@ class MainWindow(QtWidgets.QMainWindow):
         
         print("Sélection de répertoire cliquée.")
         # Ouvre la boîte de dialogue pour parcourir les fichiers
-        #fichier_selectionne, _ = QFileDialog.getOpenFileName(self, "Sélectionner un fichier", "", "Tous les fichiers (*)")
-        self.repertoire = QFileDialog.getExistingDirectory(self, "Sélectionner un répertoire", "") #afficher la window de selection
-        # Affiche le fichier sélectionné dans la console
+ 
+        self.repertoire = QFileDialog.getExistingDirectory(self, "Sélectionner un répertoire", "") #afficher la windows de selection
+
         
-        if self.repertoire!="None":
+        if self.repertoire!="":
             _translate = QtCore.QCoreApplication.translate
 
             self.ui.label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:9pt;\">{}</span></p></body></html>".format(self.repertoire)))
             
-            print("Répertoire sélectionné :", self.repertoire)
+            print("Répertoire sélectionné :", self.repertoire,"|")
         else:
             print("Aucun fichier sélectionné.")
 
     def on_start_install(self):
         _translate = QtCore.QCoreApplication.translate    
         
-        if self.repertoire!="None": #verification que l'utilisateur a bien selectionner un repertoire
+        if self.repertoire!="": #verification que l'utilisateur a bien selectionner un repertoire
             install(self.repertoire)
         else:
             print("selectionne le repertoire")
