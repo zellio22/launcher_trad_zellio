@@ -12,3 +12,5 @@
 - Enregistrer le fichier puis vous pourrez démarrer le jeu.
 
 :warning: - **Avec cette méthode il se peut que la traduction ne fonctionne pas, pour résoudre le soucis il faut réencoder le fichier `global.ini` en `UTF8 with BOM` avec un logiciel type Notepad++.**
+
+![](images/image.png)
